@@ -20,24 +20,7 @@ struct ArticleDetailView: View {
                     .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                     .padding(.bottom, 20)
                 
-                VStack(alignment: .leading){
-                    Text(article?.byline?.uppercased() ?? "")
-                        .font(.system(.headline, design: .default, weight: .bold))
-                        .foregroundColor(.secondary)
-                        .padding(.bottom, 8)
-                    
-                    HStack {
-                        Image(systemName: "calendar")
-                            .font(.system(size: 20))
-                            .foregroundColor(.secondary)
-                        
-                        Text(article?.published_date ?? "")
-                            .font(.system(size: 14))
-                            .foregroundColor(.secondary)
-                        
-                    }
-                }
-                .padding(.bottom, 30)
+                SubTitleView(articleBy: article?.byline ?? "", publishDate: article?.published_date ?? "")
                 
                 Text(article?.adx_keywords ?? "")
                     .font(.system(.subheadline, design: .rounded))
@@ -53,9 +36,9 @@ struct ArticleDetailView: View {
                     } label: {
                         HStack {
                             Image(systemName: "arrow.left")
-                                .foregroundColor(.primary)
+                                .foregroundColor(.white)
                             Text("Articles")
-                                .foregroundColor(.primary)
+                                .foregroundColor(.white)
                         }
                     }
                     
@@ -66,8 +49,39 @@ struct ArticleDetailView: View {
     }
 }
 
+// MARK: - SubViews
+
+struct SubTitleView: View {
+    
+    var articleBy: String
+    var publishDate: String
+    
+    var body: some View {
+        VStack(alignment: .leading){
+            Text(articleBy.uppercased() )
+                .font(.system(.headline, design: .default, weight: .bold))
+                .foregroundColor(.secondary)
+                .padding(.bottom, 8)
+            
+            HStack {
+                Image(systemName: "calendar")
+                    .font(.system(size: 20))
+                    .foregroundColor(.secondary)
+                
+                Text(publishDate)
+                    .font(.system(size: 14))
+                    .foregroundColor(.secondary)
+                
+            }
+        }
+        .padding(.bottom, 30)
+    }
+}
+
 struct ArticleDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ArticleDetailView()
     }
 }
+
+

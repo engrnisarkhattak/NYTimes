@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NetworkManager: APIHandler {
+final class APIManager: APIHandler {
 
     let session: URLSession
 

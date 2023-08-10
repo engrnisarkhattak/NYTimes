@@ -26,10 +26,13 @@ enum Period: Int, CaseIterable {
     }
     
 }
+
+
 @MainActor
 final class ArticleListViewModel: ObservableObject {
     
-    private let manager = NetworkManager()
+    private let service = ArticleServices()
+    
     @Published var selectedPeriod: Period = .oneWeek
     
     @Published var searchText: String = ""
@@ -40,7 +43,6 @@ final class ArticleListViewModel: ObservableObject {
     @Published var showLoader: Bool = false
     
     
-
     var filterdArticles: [Article] {
         get {
             return searchText.count > 0 ? articles.filter { $0.title!.localizedCaseInsensitiveContains(searchText)} : articles
@@ -48,21 +50,14 @@ final class ArticleListViewModel: ObservableObject {
         
     }
     
-    var request: URLRequest {
-        let urlString = "\(BASE_URL)/\(MOST_VIEWED_ARTICLE)/\(selectedPeriod.rawValue ).json?api-key=\(API_KEY)"
-        print("url string: \(urlString)")
-        let url = URL(string: urlString)!
-        return URLRequest(url: url)
-    }
-    
     
     func fetchArticleData() async {
         
         self.showLoader = true
         do {
-            let response = try await manager.fetchDataWith(type: ArticleResult.self, with: request)
+            let response = try await service.fetchArticleData(selectedPeriod: selectedPeriod)
             articles = response.results?.compactMap({ $0 }) ?? []
-            showLoader = false
+            self.showLoader = false
         }
         catch {
             errorMessage = "\((error as! APIError).descriptionValue)"

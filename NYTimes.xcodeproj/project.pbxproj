@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9446A6382A84C142007179D1 /* ArticleServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9446A6372A84C142007179D1 /* ArticleServices.swift */; };
 		947791A42A83505C0008F596 /* NYTimesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791A32A83505C0008F596 /* NYTimesApp.swift */; };
 		947791A62A83505C0008F596 /* ArticlesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791A52A83505C0008F596 /* ArticlesListView.swift */; };
 		947791A82A83505E0008F596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 947791A72A83505E0008F596 /* Assets.xcassets */; };
@@ -15,10 +16,10 @@
 		947791BF2A83505E0008F596 /* NYTimesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791BE2A83505E0008F596 /* NYTimesUITests.swift */; };
 		947791C12A83505E0008F596 /* NYTimesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791C02A83505E0008F596 /* NYTimesUITestsLaunchTests.swift */; };
 		947791D22A83519B0008F596 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791D12A83519B0008F596 /* ArticleListViewModel.swift */; };
-		947791D42A8351B30008F596 /* ArticleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791D32A8351B30008F596 /* ArticleDTO.swift */; };
+		947791D42A8351B30008F596 /* ArticleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791D32A8351B30008F596 /* ArticleResult.swift */; };
 		947791E12A8379EF0008F596 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791E02A8379EF0008F596 /* APIError.swift */; };
 		947791E32A8379FD0008F596 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791E22A8379FD0008F596 /* APIHandler.swift */; };
-		947791E52A837A070008F596 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791E42A837A070008F596 /* NetworkManager.swift */; };
+		947791E52A837A070008F596 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791E42A837A070008F596 /* APIManager.swift */; };
 		947791E82A837AE80008F596 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791E72A837AE80008F596 /* APIConstants.swift */; };
 		947791ED2A83A4420008F596 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791EC2A83A4420008F596 /* ArticleDetailView.swift */; };
 		947791EF2A83A9A30008F596 /* ArticleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947791EE2A83A9A30008F596 /* ArticleCellView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9446A6372A84C142007179D1 /* ArticleServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleServices.swift; sourceTree = "<group>"; };
 		947791A02A83505C0008F596 /* NYTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		947791A32A83505C0008F596 /* NYTimesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesApp.swift; sourceTree = "<group>"; };
 		947791A52A83505C0008F596 /* ArticlesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListView.swift; sourceTree = "<group>"; };
@@ -54,10 +56,10 @@
 		947791BE2A83505E0008F596 /* NYTimesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesUITests.swift; sourceTree = "<group>"; };
 		947791C02A83505E0008F596 /* NYTimesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		947791D12A83519B0008F596 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
-		947791D32A8351B30008F596 /* ArticleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDTO.swift; sourceTree = "<group>"; };
+		947791D32A8351B30008F596 /* ArticleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResult.swift; sourceTree = "<group>"; };
 		947791E02A8379EF0008F596 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		947791E22A8379FD0008F596 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		947791E42A837A070008F596 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		947791E42A837A070008F596 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		947791E72A837AE80008F596 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		947791E92A8393D00008F596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		947791EC2A83A4420008F596 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9446A63B2A84CAC5007179D1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9446A6372A84C142007179D1 /* ArticleServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		947791972A83505C0008F596 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 			children = (
 				947791E92A8393D00008F596 /* Info.plist */,
 				947791DF2A8379DF0008F596 /* Network */,
+				9446A63B2A84CAC5007179D1 /* Services */,
 				947791D52A836F2D0008F596 /* NYArticles */,
 				947791A32A83505C0008F596 /* NYTimesApp.swift */,
 				947791A72A83505E0008F596 /* Assets.xcassets */,
@@ -151,7 +162,7 @@
 		947791CD2A8350950008F596 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				947791D32A8351B30008F596 /* ArticleDTO.swift */,
+				947791D32A8351B30008F596 /* ArticleResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,7 +201,7 @@
 				947791E72A837AE80008F596 /* APIConstants.swift */,
 				947791E02A8379EF0008F596 /* APIError.swift */,
 				947791E22A8379FD0008F596 /* APIHandler.swift */,
-				947791E42A837A070008F596 /* NetworkManager.swift */,
+				947791E42A837A070008F596 /* APIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -336,8 +347,9 @@
 			files = (
 				947791A62A83505C0008F596 /* ArticlesListView.swift in Sources */,
 				947791D22A83519B0008F596 /* ArticleListViewModel.swift in Sources */,
-				947791D42A8351B30008F596 /* ArticleDTO.swift in Sources */,
-				947791E52A837A070008F596 /* NetworkManager.swift in Sources */,
+				947791D42A8351B30008F596 /* ArticleResult.swift in Sources */,
+				947791E52A837A070008F596 /* APIManager.swift in Sources */,
+				9446A6382A84C142007179D1 /* ArticleServices.swift in Sources */,
 				947791E82A837AE80008F596 /* APIConstants.swift in Sources */,
 				947791E32A8379FD0008F596 /* APIHandler.swift in Sources */,
 				947791ED2A83A4420008F596 /* ArticleDetailView.swift in Sources */,
